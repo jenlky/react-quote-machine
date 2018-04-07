@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import QuoteBox from './components/quote-box';
-import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 import $ from "jquery";
+//import registerServiceWorker from './registerServiceWorker';
 
 class App extends Component {
   constructor(props){
@@ -44,7 +45,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container quote-container">
         <QuoteBox getNewQuote={this.getNewQuote} author={this.state.author}
           quote={this.state.quote} onClickTrigger={this.onClickTrigger} />
       </div>
@@ -53,4 +54,4 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+//registerServiceWorker();
