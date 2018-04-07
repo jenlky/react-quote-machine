@@ -1,0 +1,21 @@
+{
+  "name": "react-quote-machine",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://helplah.github.io/react-quote-machine/",
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "scss":"node-sass src/sass/style.scss src/index.css -w",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,132 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: rgba(242, 137, 48, 0.9);
+}
+
+/* Three ways to do it: absolute position, flexbox, grid */
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quote-container {
+  background: #4d1782;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.8);
+  margin-bottom: 38%;
+}
+
+/*
+.container {
+  position: absolute;
+  background-color: green;
+  min-height: 40%;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+
+/* flex basis only can be used for flex items */
+.align-box {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+@media (max-width: 768px){
+  .quote-container {
+    width: 100%;
+  }
+
+  .title {
+    width: 200px;
+  }
+}
+
+@media (min-width: 768px){
+  .align-box {
+    margin: 10px 26px 10px 26px;
+  }
+
+  .quote-container {
+    margin-bottom: 28%;
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px){
+  .quote-container {
+    margin-bottom: 17%;
+    width: 65%;
+  }
+}
+
+@media (min-width: 1240px){
+  .quote-container {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1440px){
+  .quote-container {
+    width: 50%;
+  }
+}
+
+.text {
+  color: white;
+  font-family: Times New Roman, Georgia, serif;
+  font-size: 20px;
+}
+
+.quote {
+  order: 1;
+  align-self: flex-start;
+}
+
+.author {
+  order: 2;
+  align-self: flex-start;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.btn-quote {
+  order: 3;
+  align-self: flex-end;
+  color: white;
+  background: #4d1782;
+  border-radius: 5px;
+}
+
+.icon {
+  order: 4;
+  align-self: flex-start;
+  font-size: 40px;
+  cursor: pointer;
+  color: #1DA1F2;
+}
