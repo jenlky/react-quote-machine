@@ -5,12 +5,13 @@
   "homepage": "https://helplah.github.io/react-quote-machine/",
   "dependencies": {
     "gh-pages": "^1.1.0",
+    "jquery": "^3.3.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "scss":"node-sass src/sass/style.scss src/index.css -w",
+    "scss": "node-sass src/sass/style.scss public/style.css -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

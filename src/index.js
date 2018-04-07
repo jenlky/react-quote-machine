@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import QuoteBox from './components/quote-box';
-//import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
+import $ from "jquery";
 
 class App extends Component {
   constructor(props){
