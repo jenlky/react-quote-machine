@@ -65,9 +65,7 @@ body {
     margin-bottom: 28%;
     width: 80%; }
   .text {
-    font-size: 18px !important; }
-  .title {
-    margin: 8% 0 4% 0; } }
+    font-size: 18px !important; } }
 
 @media (min-width: 1023px) {
   .align-box {
@@ -86,7 +84,9 @@ body {
 
 @media (min-width: 1440px) {
   .quote-container {
-    width: 50%; } }
+    width: 50%; }
+  .title {
+    margin: 6% 0 4% 0 !important; } }
 
 .text {
   color: white;
@@ -106,7 +106,7 @@ body {
 
 .title {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  margin: 10% 0 4% 0; }
+  margin: 8% 0 4% 0; }
 
 .btn-quote {
   order: 3;

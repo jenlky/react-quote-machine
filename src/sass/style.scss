@@ -87,10 +87,6 @@ body {
   .text {
     font-size: 18px !important;
   }
-
-  .title {
-    margin: 8% 0 4% 0;
-  }
 }
 
 // above 1024px or laptop width
@@ -121,6 +117,10 @@ body {
   .quote-container {
     width: 50%;
   }
+
+  .title {
+      margin: 6% 0 4% 0 !important;
+  }
 }
 
 .text {
@@ -144,7 +144,7 @@ body {
 
 .title {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  margin: 10% 0 4% 0;
+  margin: 8% 0 4% 0;
 }
 
 .btn-quote {
