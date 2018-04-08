@@ -1,4 +1,4 @@
-body, html {
+body, html, #root, .parent {
   width: 100%;
   height: 100%;
 }
@@ -11,7 +11,7 @@ body {
 .parent {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -19,11 +19,10 @@ body {
   background: #4d1782;
   border-radius: 10px;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.8);
-  margin-bottom: 38%;
+  padding: 0;
 }
 
-/*
-.container {
+/* .container {
   position: absolute;
   background-color: green;
   min-height: 40%;
@@ -39,42 +38,68 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-*/
+} */
 
 /* flex basis only can be used for flex items */
 .align-box {
   min-height: 30vh;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin: 10px 26px 10px 26px;
   padding: 16px;
 }
 
-@media (max-width: 768px){
+// below 768px or tablet width
+@media (min-width: 0px) and (max-width: 768px){
+  .align-box {
+    margin: 0;
+    padding: 14px 18px 14px 18px;
+  }
+
   .quote-container {
     width: 100%;
   }
 
+  .text {
+    font-size: 16px !important;
+  }
+
   .title {
     width: 200px;
+    margin: 7% 0 10% 0 !important;
   }
 }
 
-@media (min-width: 768px){
+// above 768px or tablet width
+@media (min-width: 768px) and (max-width: 1023px){
   .align-box {
     margin: 10px 26px 10px 26px;
+    padding: 16px;
   }
 
   .quote-container {
     margin-bottom: 28%;
     width: 80%;
   }
+
+  .text {
+    font-size: 18px !important;
+  }
+
+  .title {
+    margin: 8% 0 4% 0;
+  }
 }
 
-@media (min-width: 1024px){
+// above 1024px or laptop width
+@media (min-width: 1023px){
+  .align-box {
+    margin: 10px 26px 10px 26px;
+    padding: 16px;
+  }
+
   .quote-container {
     margin-bottom: 17%;
     width: 65%;
@@ -82,6 +107,11 @@ body {
 }
 
 @media (min-width: 1240px){
+  .align-box {
+    margin: 10px 26px 10px 26px;
+    padding: 16px;
+  }
+
   .quote-container {
     width: 55%;
   }
@@ -109,10 +139,12 @@ body {
   align-self: flex-start;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .title {
   font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin: 10% 0 4% 0;
 }
 
 .btn-quote {
