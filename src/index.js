@@ -57,7 +57,7 @@ class App extends Component {
       .then(data => {
         console.log(data[0]);
         const stripedContent = data[0].content.replace(regex, "");
-        this.setState({ author: this.decodeHtml(data[0].title) });
+        this.setState({ author: `— ${this.decodeHtml(data[0].title)}` });
         this.setState({ quote: this.decodeHtml(stripedContent) });
       })
       .catch(error => console.log("error is", error));
