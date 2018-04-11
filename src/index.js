@@ -48,17 +48,26 @@ class App extends Component {
       }
     }); */
 
-    const regex = /<p>|<\/p>|<br \/>/g;
-
     fetch('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', {
       cache: "no-store"
     })
       .then(res => res.json())
       .then(data => {
         console.log(data[0]);
-        const stripedContent = data[0].content.replace(regex, "");
-        this.setState({ author: `— ${this.decodeHtml(data[0].title)}` });
-        this.setState({ quote: this.decodeHtml(stripedContent) });
+
+        // let the Browser do the sanitation
+        const dummyNode = document.createElement("div");
+        let resultText = "";
+
+        // innerHTML retrieves and sets the content in HTML format
+        dummyNode.innerHTML = data[0].content;
+        resultText = dummyNode.innerText;
+        this.setState({ quote: resultText });
+
+        dummyNode.innerHTML = data[0].title;
+        // innerText retrieves and sets the content of the tag as plain text
+        resultText = dummyNode.innerText;
+        this.setState({ author: `— ${resultText}` });
       })
       .catch(error => console.log("error is", error));
   }
